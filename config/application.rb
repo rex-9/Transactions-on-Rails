@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module TransactionsOnRails
   class Application < Rails::Application
+    # Splash screen
+    config.autoload_paths += %W(#{config.root}/lib)
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
