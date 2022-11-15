@@ -6,14 +6,15 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-User.create(name: "rex")
-User.create(name: "pu2")
+User.create(name: "rex", email: "rex@soul.com", password: "password")
+User.create(name: "pu2", email: "pu@2.com", password: "password")
 
-Category.create(name: "food", icon: "source.unsplash.com/random/200x200")
-Category.create(name: "drink", icon: "source.unsplash.com/random/200x200")
+Category.create(name: "food", icon: "https://source.unsplash.com/random/100x100", author_id: 1)
+Category.create(name: "drink", icon: "https://source.unsplash.com/random/100x100", author_id: 1)
 
-Purchase.create(user_id: 1, name: "MacDonald's nugget", amount: 100)
-Purchase.create(user_id: 1, name: "Starbucks Cuppacino", amount: 50)
+Purchase.create(name: "MacDonald's nugget", amount: 100, author_id: 1)
+Purchase.create(name: "Starbucks Cuppacino", amount: 50, author_id: 1)
 
 CategoryPurchase.create(category_id: 1, purchase_id: 1)
 CategoryPurchase.create(category_id: 1, purchase_id: 2)
+CategoryPurchase.create(category_id: 2, purchase_id: 2)

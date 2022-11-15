@@ -13,6 +13,7 @@ module.exports = {
         main: '#3778c2',
         second: '#5fb523',
         text: '#434b54',
+        bg: '#F5F6F8',
       },
       fontFamily: {
         proxima: ['Proxima Nova', ...defaultTheme.fontFamily.sans],

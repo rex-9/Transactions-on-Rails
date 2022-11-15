@@ -17,8 +17,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_14_124004) do
   create_table "categories", force: :cascade do |t|
     t.string "name", null: false
     t.string "icon", null: false
+    t.bigint "author_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_categories_on_author_id"
     t.index ["name"], name: "index_categories_on_name"
   end
 
@@ -32,13 +34,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_14_124004) do
   end
 
   create_table "purchases", force: :cascade do |t|
-    t.bigint "user_id", null: false
+    t.bigint "author_id", null: false
     t.string "name", null: false
     t.integer "amount", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_purchases_on_author_id"
     t.index ["name"], name: "index_purchases_on_name"
-    t.index ["user_id"], name: "index_purchases_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -55,7 +57,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_14_124004) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "categories", "users", column: "author_id"
   add_foreign_key "category_purchases", "categories"
   add_foreign_key "category_purchases", "purchases"
-  add_foreign_key "purchases", "users"
+  add_foreign_key "purchases", "users", column: "author_id"
 end

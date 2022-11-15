@@ -9,8 +9,18 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <section class="flex justify-center h-screen">
+      <div class="flex border-2 border-gray-200 bg-bg w-96">
+        <div class="w-96">
+          <% if notice %>
+            <p class="notice bg-green-300 text-center py-2"><%= notice %></p>
+          <% end %>
+          <% if alert %>
+            <p class="alert bg-red-300 text-center py-2"><%= alert %></p>
+          <% end %>
+          <%= yield %>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
