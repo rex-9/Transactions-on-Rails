@@ -20,5 +20,26 @@ class CategoriesController < ApplicationController
     @purchases = category.purchases
   end
 
+  def new
+    @category = Category.new
+  end
+
+  def create
+    @category = Category.new(category_params)
+
+    if @category.save
+      redirect_to categories_path
+    else
+      flash[:alert] = "Category not created"
+      render :new
+    end
+  end
+
   def splash; end
+
+  private
+
+  def category_params
+    params.require(:category).permit(:name, :icon).merge(author_id: current_user.id)
+  end
 end

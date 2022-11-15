@@ -1,0 +1,15 @@
+<%= form_with model: model do |form| %>
+  <% if model.errors.any? %>
+    <div class="bg-red-300">
+      <h3><%= pluralize(model.errors.count, "error") %> occured:</h3>
+      <ul>
+        <% model.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= form.text_field :name, placeholder: 'Name', required: true, autofocus: true, class: "input" %>
+  <%= form.text_field :icon, placeholder: 'Icon', required: true, class: "input" %>
+  <%= form.submit 'Create', class: "btn-green", data: { disable_with: t('loading') } %>
+<% end %>
