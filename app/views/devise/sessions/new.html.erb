@@ -1,5 +1,5 @@
 <section class="w-full">
-  <%= render 'shared/nav', header: 'Log In' %>
+  <%= render 'shared/nav', header: 'Log In', back: true %>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "input" %>
     <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "input" %>

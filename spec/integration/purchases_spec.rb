@@ -4,6 +4,7 @@ RSpec.describe 'Purchases', type: :system, js: true do
   describe 'index page' do
     before(:example) do
       @user = User.create(name: 'Rex', email: 'rex@soul.com', password: '123456')
+      visit new_user_session_path
       sign_in @user
 
       @category = Category.create(author: @user, name: 'Food', icon: 'https://source.unsplash.com/random/100x100')
