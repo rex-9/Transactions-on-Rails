@@ -1,5 +1,9 @@
 <div class="w-full py-2 text-lg font-bold flex justify-between px-4 items-center text-white bg-main">
-<%= link_to icon('fa-solid', 'arrow-left'), :back %>
-<%= header %>
-<%= button_to "", class:"w-20" %>
+  <% if back %>
+    <%= link_to icon('fa-solid', 'arrow-left'), :back %>
+  <% end %>
+  <%= header %>
+  <% if back %>
+    <%= button_to "", class:"w-20" %>
+  <% end %>
 </div>

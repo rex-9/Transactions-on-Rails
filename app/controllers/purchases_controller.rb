@@ -20,9 +20,6 @@ class PurchasesController < ApplicationController
     category = Category.find_by_id(params[:category_id])
     @purchase = category.purchases.new(purchase_params)
 
-    # flash[:alert] = join.category_id
-    # render :new
-    #  if join.nil?
     if @purchase.save
       join = CategoryPurchase.create(category_id: category.id, purchase_id: @purchase.id)
       if join.nil?
@@ -35,11 +32,6 @@ class PurchasesController < ApplicationController
       flash[:alert] = @purchase.errors.messages
       render :new
     end
-  # else
-  #   flash[:alert] = join.errors.messages
-  #   render :new
-  #  end
-
   end
 
   def purchase_params

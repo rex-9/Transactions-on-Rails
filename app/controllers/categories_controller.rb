@@ -6,10 +6,10 @@ class CategoriesController < ApplicationController
     @totals = {}
     @categories.map do |category|
       category.purchases.each do |purchase|
-        if @totals["#{category.id}"].nil?
-          @totals["#{category.id}"] = purchase.amount
+        if @totals[category.id.to_s].nil?
+          @totals[category.id.to_s] = purchase.amount
         else
-          @totals["#{category.id}"] += purchase.amount
+          @totals[category.id.to_s] += purchase.amount
         end
       end
     end

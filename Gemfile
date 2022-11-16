@@ -78,3 +78,11 @@ gem 'tailwindcss-rails', '~> 2.0'
 gem 'foreman', '~> 0.87.2'
 
 gem 'font-awesome-sass', '~> 6.2'
+
+gem 'rspec-rails', '~> 6.0'
+
+gem 'rails-controller-testing'
+
+gem 'bullet'
+
+gem 'database_cleaner'

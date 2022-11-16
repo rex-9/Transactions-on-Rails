@@ -1,4 +1,4 @@
-<%= render 'shared/nav', header: "Purchases" %>
+<%= render 'shared/nav', header: "Purchases", back: true %>
 <p class="text-green-500 font-bold text-right p-2">Total Cost: $<%= @total %></p>
 <% @purchases.each do |purchase| %>
   <div class="flex justify-between p-4 bg-gray-200 hover:bg-gray-100 my-2">
