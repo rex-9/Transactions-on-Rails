@@ -8,6 +8,7 @@
         "ignoreAtRules": [
           "tailwind",
           "apply",
+          "layer",
           "variants",
           "responsive",
           "screen"
@@ -20,6 +21,7 @@
         "ignoreAtRules": [
           "tailwind",
           "apply",
+          "layer",
           "variants",
           "responsive",
           "screen"
