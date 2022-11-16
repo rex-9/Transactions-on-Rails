@@ -8,7 +8,7 @@ This Ruby on Rails application allows the user to:
 - see the money spent on each category.
 
 ## Live Demo
-[Transactions On Rails](https://transaction-on-rails.herokuapp.com/)
+[Transactions On Rails](https://transactions-on-rails.herokuapp.com/)
 
 ## Built With
 
