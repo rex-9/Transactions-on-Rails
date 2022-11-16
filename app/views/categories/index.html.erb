@@ -1,7 +1,7 @@
 <%= render 'shared/nav', header: "Categories" %>
 <% @categories.each do |category| %>
   <div class= "mb-2">
-    <%= link_to category_path(category.id), class: "flex justify-between items-center bg-gray-200 pr-8 hover:bg-gray-100" do %>
+    <%= link_to category_purchases_path(category.id), class: "flex justify-between items-center bg-gray-200 pr-8 hover:bg-gray-100" do %>
       <%= image_tag(category.icon, :alt => "Category Icon") %>
       <p><%= t(category.name) %></p>
       <p>$<%= @totals["#{category.id}"] || 0 %></p>

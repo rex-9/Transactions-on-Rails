@@ -10,6 +10,4 @@ Rails.application.routes.draw do
   resources :categories, only: [:index, :show, :new, :create] do
     resources :purchases, only: [:index, :new, :create]
   end
-
-  resources :purchases, only: [:show, :edit, :update, :destroy]
 end

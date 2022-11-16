@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
     @totals = {}
     @categories.map do |category|
       category.purchases.each do |purchase|
-        if @totals["#{category.id}"] == nil
+        if @totals["#{category.id}"].nil?
           @totals["#{category.id}"] = purchase.amount
         else
           @totals["#{category.id}"] += purchase.amount
@@ -15,22 +15,17 @@ class CategoriesController < ApplicationController
     end
   end
 
-  def show
-    category = Category.find(params[:id])
-    @purchases = category.purchases
-  end
-
   def new
     @category = Category.new
   end
 
   def create
-    @category = Category.new(category_params)
+    category = Category.new(category_params)
 
-    if @category.save
+    if category.save
       redirect_to categories_path
     else
-      flash[:alert] = "Category not created"
+      flash[:alert] = 'Category not created'
       render :new
     end
   end

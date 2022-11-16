@@ -1,1 +1,9 @@
-<div><%= @purchases %></div>
+<%= render 'shared/nav', header: "Purchases" %>
+<p class="text-green-500 font-bold text-right p-2">Total Cost: $<%= @total %></p>
+<% @purchases.each do |purchase| %>
+  <div class="flex justify-between p-4 bg-gray-200 hover:bg-gray-100 my-2">
+    <p><%= purchase.name %></p>
+    <p>$<%= purchase.amount %></p>
+  </div>
+<% end %>
+<%= link_to "New Purchase", new_category_purchase_path(@category_id), class: "btn-green fixed bottom-4 w-[379px]" %>
