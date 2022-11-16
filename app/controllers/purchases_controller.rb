@@ -26,7 +26,7 @@ class PurchasesController < ApplicationController
         flash[:alert] = @purchase.errors.messages
         render :new
       else
-        redirect_to :back
+        redirect_to category_purchases_path(category.id)
       end
     else
       flash[:alert] = @purchase.errors.messages

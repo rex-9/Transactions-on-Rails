@@ -3,7 +3,12 @@
     <%= link_to icon('fa-solid', 'arrow-left'), :back %>
   <% end %>
   <%= header %>
-  <% if back %>
-    <%= button_to "", class:"w-20" %>
+  <% if header == "Log In" %>
+    <%= link_to "Register", new_user_registration_path, class: "btn-green w-fit px-2 py-0" %>
+  <% elsif header == "Sign Up" %>
+    <%= link_to "Log In", new_user_session_path, class: "btn-green w-fit px-2 py-0" %>
+  <% end %>
+  <% if header != "Log In" && header != "Sign Up" %>
+    <%= button_to icon('fa-solid', 'sign-out'), destroy_user_session_path, class:"" %>
   <% end %>
 </div>

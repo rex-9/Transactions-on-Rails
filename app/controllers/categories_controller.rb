@@ -23,7 +23,7 @@ class CategoriesController < ApplicationController
     category = Category.new(category_params)
 
     if category.save
-      redirect_to :back
+      redirect_to categories_path
     else
       flash[:alert] = 'Category not created'
       render :new
