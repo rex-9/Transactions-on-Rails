@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  subject { User.new(name: 'Rex', email: 'rex@soul.com', password: "password") }
+  subject { User.new(name: 'Rex', email: 'rex@soul.com', password: 'password') }
 
   before { subject.save }
 
@@ -11,12 +11,12 @@ RSpec.describe User, type: :model do
   end
 
   it 'Name should not be less than 3 characters' do
-    subject.name = "Rx"
+    subject.name = 'Rx'
     expect(subject).to_not be_valid
   end
 
   it 'Name is more than 3 characters' do
-    subject.name = "Rex"
+    subject.name = 'Rex'
     expect(subject).to be_valid
   end
 

@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-
   before(:example) do
-    @rex = User.create(name: "Rex", email: "jane@doe.com", password: "pw1234")
+    @rex = User.create(name: 'Rex', email: 'jane@doe.com', password: 'pw1234')
   end
   subject { Category.new(name: 'Food', icon: 'https://source.unsplash.com/random/100x100', author_id: @rex.id) }
 
@@ -15,7 +14,7 @@ RSpec.describe Category, type: :model do
   end
 
   it 'Name is valid' do
-    subject.name = "Food"
+    subject.name = 'Food'
     expect(subject).to be_valid
   end
 
@@ -25,7 +24,7 @@ RSpec.describe Category, type: :model do
   end
 
   it 'Icon is valid' do
-    subject.icon = "https://source.unsplash.com/random/100x100"
+    subject.icon = 'https://source.unsplash.com/random/100x100'
     expect(subject).to be_valid
   end
 
@@ -45,7 +44,7 @@ RSpec.describe Category, type: :model do
   end
 
   it 'Author value should not be String' do
-    subject.author_id = "1"
+    subject.author_id = '1'
     expect(subject).to_not be_valid
   end
 end

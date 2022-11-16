@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Purchase, type: :model do
   before(:example) do
-    @rex = User.create(name: "Rex", email: "jane@doe.com", password: "pw1234")
+    @rex = User.create(name: 'Rex', email: 'jane@doe.com', password: 'pw1234')
   end
   subject { Purchase.new(name: 'MacDonald Nugget', amount: 100, author_id: @rex.id) }
 
@@ -14,7 +14,7 @@ RSpec.describe Purchase, type: :model do
   end
 
   it 'Name is Valid' do
-    subject.name = "MacDonald Nugget"
+    subject.name = 'MacDonald Nugget'
     expect(subject).to be_valid
   end
 
@@ -24,7 +24,7 @@ RSpec.describe Purchase, type: :model do
   end
 
   it 'Amount should not be String' do
-    subject.amount = "aaa"
+    subject.amount = 'aaa'
     expect(subject).to_not be_valid
   end
 
@@ -49,7 +49,7 @@ RSpec.describe Purchase, type: :model do
   end
 
   it 'Author value should not be String' do
-    subject.author_id = "1"
+    subject.author_id = '1'
     expect(subject).to_not be_valid
   end
 end

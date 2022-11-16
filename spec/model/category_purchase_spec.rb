@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe CategoryPurchase, type: :model do
   before(:example) do
-    @rex = User.create(name: "Rex", email: "jane@doe.com", password: "pw1234")
+    @rex = User.create(name: 'Rex', email: 'jane@doe.com', password: 'pw1234')
     @purchase = Purchase.create(name: 'MacDonald Nugget', amount: 100, author_id: @rex.id)
     @category = Category.create(name: 'Food', icon: 'https://source.unsplash.com/random/100x100', author_id: @rex.id)
   end
@@ -22,12 +22,12 @@ RSpec.describe CategoryPurchase, type: :model do
   end
 
   it 'Category ID should NOT be String' do
-    subject.category_id = "aaa"
+    subject.category_id = 'aaa'
     expect(subject).to_not be_valid
   end
 
   it 'Purchase ID should NOT be String' do
-    subject.purchase_id = "bbb"
+    subject.purchase_id = 'bbb'
     expect(subject).to_not be_valid
   end
 
