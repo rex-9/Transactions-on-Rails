@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .input {
+    @apply w-full focus:placeholder-gray-300 placeholder-gray-400 bg-white border-2 border-gray-300;
+  }
+
+  .btn-main {
+    @apply bg-main text-white w-full text-center py-2 border-gray-400 border-2 hover:bg-blue-300 hover:text-text rounded-lg;
+  }
+
+  .btn-text {
+    @apply bg-text text-white w-full text-center py-2 border-gray-400 border-2 hover:bg-gray-300 hover:text-text rounded-lg;
+  }
+
+  .btn-green {
+    @apply text-white w-full text-center py-2 border-gray-400 border-2 hover:text-text rounded-lg bg-green-500 hover:bg-green-300;
+  }
+}
