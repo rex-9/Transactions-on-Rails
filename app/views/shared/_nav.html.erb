@@ -9,6 +9,6 @@
     <%= link_to "Log In", new_user_session_path, class: "btn-green w-fit px-2 py-0" %>
   <% end %>
   <% if header != "Log In" && header != "Sign Up" %>
-    <%= button_to icon('fa-solid', 'sign-out'), destroy_user_session_path, class:"" %>
+    <%= button_to icon('fa-solid', 'sign-out'), destroy_user_session_path, method: :delete, class:"" %>
   <% end %>
 </div>
