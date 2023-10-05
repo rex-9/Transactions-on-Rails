@@ -105,6 +105,7 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.5.0)
     erubi (1.11.0)
+    ffi (1.15.5)
     ffi (1.15.5-x64-mingw-ucrt)
     font-awesome-sass (6.2.0)
       sassc (~> 2.0)
@@ -142,10 +143,13 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.8)
-    nokogiri (1.13.9-x64-mingw-ucrt)
+    nokogiri (1.15.4-x64-mingw-ucrt)
+      racc (~> 1.4)
+    nokogiri (1.15.4-x86_64-darwin)
       racc (~> 1.4)
     orm_adapter (0.5.0)
-    pg (1.4.4-x64-mingw-ucrt)
+    pg (1.5.4)
+    pg (1.5.4-x64-mingw-ucrt)
     public_suffix (5.0.0)
     puma (5.6.5)
       nio4r (~> 2.0)
@@ -225,7 +229,9 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.1.1)
       railties (>= 6.0.0)
-    tailwindcss-rails (2.0.21-x64-mingw-ucrt)
+    tailwindcss-rails (2.0.30-x64-mingw-ucrt)
+      railties (>= 6.0.0)
+    tailwindcss-rails (2.0.30-x86_64-darwin)
       railties (>= 6.0.0)
     thor (1.2.1)
     timeout (0.3.0)
@@ -259,6 +265,7 @@ GEM
 
 PLATFORMS
   x64-mingw-ucrt
+  x86_64-darwin-22
 
 DEPENDENCIES
   bootsnap
@@ -286,7 +293,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.1.2p20
+   ruby 3.2.2p53
 
 BUNDLED WITH
-   2.3.24
+   2.4.20

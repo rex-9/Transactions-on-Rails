@@ -3,6 +3,7 @@
 > The mobile web application where users can manage their budget: users have a list of transactions associated with a category so that the owner can see how much money they spent and on what.
 
 This Ruby on Rails application allows the user to:
+
 - register and log in, so that the data is private to them.
 - introduce new transactions associated with a category.
 - see the money spent on each category.
@@ -46,11 +47,13 @@ bundle install
 #### 4. Set up the database:
 
 - setup the database environment in
+
 ```
 config/database.yml
 ```
 
 #### 5. Create the databases:
+
 ```
 rails db:create
 ```
@@ -66,7 +69,20 @@ rails db:migrate
 ```
 rails db:seed
 ```
-#### 8. Run the server:
+
+#### 8. Install NPM packages:
+
+```
+npm install
+```
+
+#### 9. Install Asset Pipeline for TailwindCSS:
+
+```
+rake assets:precompile
+```
+
+#### 10. Run the server:
 
 ```
 rails s
@@ -76,6 +92,7 @@ rails s
 
 👤 **Rex**
 
+- Bento: [@rex9](https://bento.com/rex9/)<br>
 - Github: [@rex-9](https://github.com/rex-9/)<br>
 - Medium: [@rex9](https://medium.com/rex9/)<br>
 - LinkedIn: [@rex9](https://www.linkedin.com/in/rex9/)<br>
